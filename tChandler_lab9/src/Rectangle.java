@@ -9,7 +9,7 @@
  * and displays the values of its length and width in the console.
  */
 
- public class Rectangle {
+public class Rectangle {
     // Variables declaration
     // Problem 1(a):
     private double length;
