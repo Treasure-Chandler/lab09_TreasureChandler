@@ -3,7 +3,9 @@
  * CS 16000-01 02/03, Fall Semester 2024
  * Lab 9
  * 
- * 
+ * This class lays out the different array manipulation methods,
+ * such as copying values from constructors, for-loops catering to
+ * arrays, and multi-class design.
  */
 
 import java.util.*;     // Mainly needed for the Random class
@@ -34,7 +36,11 @@ public class ArrayPractice {
         numbers = new int[numbersLength];
         boxes = new Rectangle[boxesLength];
         // Assigns "namesList" to the "listOfNames"
-        namesList = this.listOfNames;
+        this.listOfNames = namesList;
+
+        // Populating the arrays
+        loadNumbers();
+        loadBoxes();
     } // End of constructor ArrayPractice
 
     // Problem 4:
@@ -75,7 +81,7 @@ public class ArrayPractice {
      * entry being in a new line
      */
     public void displayNumbers() {
-        System.out.println("Number values:");
+        System.out.println("\nNumber values:");
         for (int number : numbers) {
             System.out.println(number);
         }
@@ -87,7 +93,7 @@ public class ArrayPractice {
      * with the toString() method from the Rectangle class
      */
     public void displayBoxes() {
-        System.out.println("Boxes values:");
+        System.out.println("\nBoxes values:");
         for (Rectangle box : boxes) {
             if (box != null) {
                 System.out.println(box.toString());
@@ -102,7 +108,7 @@ public class ArrayPractice {
      * entry being in a new line
      */
     public void displayList() {
-        System.out.println("List of names:");
+        System.out.println("\nList of names:");
         for (String name : listOfNames) {
             if (name != null) {
                 System.out.println(name);
